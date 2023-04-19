@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC27169E-FC0C-4666-8E60-14F76AD9CEEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema</RootNamespace>
+    <AssemblyName>Sistema</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuracion.cs" />
+    <Compile Include="frmAgregarCalificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCalificacion.Designer.cs">
+      <DependentUpon>frmAgregarCalificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarCurricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCurricula.Designer.cs">
+      <DependentUpon>frmAgregarCurricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarCurso.Designer.cs">
+      <DependentUpon>frmAsignarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarDocente.Designer.cs">
+      <DependentUpon>frmAsignarDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusqueda.Designer.cs">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearAlumnos.Designer.cs">
+      <DependentUpon>frmCrearAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearCursos.Designer.cs">
+      <DependentUpon>frmCrearCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearDocentes.Designer.cs">
+      <DependentUpon>frmCrearDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearGradoSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearGradoSeccion.Designer.cs">
+      <DependentUpon>frmCrearGradoSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearHorario.Designer.cs">
+      <DependentUpon>frmCrearHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearMatricula.Designer.cs">
+      <DependentUpon>frmCrearMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearUsuario.Designer.cs">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarMatricula.Designer.cs">
+      <DependentUpon>frmRegistrarMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearNivel.Designer.cs">
+      <DependentUpon>frmCrearNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearNivelDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearNivelDetalle.Designer.cs">
+      <DependentUpon>frmCrearNivelDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearPeriodo.Designer.cs">
+      <DependentUpon>frmCrearPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearRol.Designer.cs">
+      <DependentUpon>frmCrearRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearVacantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearVacantes.Designer.cs">
+      <DependentUpon>frmCrearVacantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteAlumnos.Designer.cs">
+      <DependentUpon>frmReporteAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteMatricula.Designer.cs">
+      <DependentUpon>frmReporteMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolPermiso.Designer.cs">
+      <DependentUpon>frmRolPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMaster.Designer.cs">
+      <DependentUpon>MDIMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reutilizable\ComboBoxItem.cs" />
+    <Compile Include="Reutilizable\EnumModelo.cs" />
+    <EmbeddedResource Include="frmAgregarCalificacion.resx">
+      <DependentUpon>frmAgregarCalificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarCurricula.resx">
+      <DependentUpon>frmAgregarCurricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarCurso.resx">
+      <DependentUpon>frmAsignarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarDocente.resx">
+      <DependentUpon>frmAsignarDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusqueda.resx">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearAlumnos.resx">
+      <DependentUpon>frmCrearAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearCursos.resx">
+      <DependentUpon>frmCrearCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearDocentes.resx">
+      <DependentUpon>frmCrearDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearGradoSeccion.resx">
+      <DependentUpon>frmCrearGradoSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearHorario.resx">
+      <DependentUpon>frmCrearHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearMatricula.resx">
+      <DependentUpon>frmCrearMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearUsuario.resx">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarMatricula.resx">
+      <DependentUpon>frmRegistrarMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearNivel.resx">
+      <DependentUpon>frmCrearNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearNivelDetalle.resx">
+      <DependentUpon>frmCrearNivelDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearPeriodo.resx">
+      <DependentUpon>frmCrearPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearRol.resx">
+      <DependentUpon>frmCrearRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearVacantes.resx">
+      <DependentUpon>frmCrearVacantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteAlumnos.resx">
+      <DependentUpon>frmReporteAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteMatricula.resx">
+      <DependentUpon>frmReporteMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolPermiso.resx">
+      <DependentUpon>frmRolPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMaster.resx">
+      <DependentUpon>MDIMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{a3c31d9e-55de-40fe-a34c-61599f4876c1}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaModelo\CapaModelo.csproj">
+      <Project>{cb88945c-1256-4956-86ef-4ec538446fc0}</Project>
+      <Name>CapaModelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\Alumnos.png" />
+    <Content Include="Iconos\Configuracion.png" />
+    <Content Include="Iconos\Cursos.png" />
+    <Content Include="Iconos\Docentes.png" />
+    <Content Include="Iconos\icon_item.png" />
+    <Content Include="Iconos\Matricula.png" />
+    <Content Include="Iconos\Salir.png" />
+    <Content Include="Iconos\Usuario.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
